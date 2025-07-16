@@ -16,23 +16,26 @@ if (isset($_SESSION['account_loggedin'])) {
         <title>Login</title>
     </head>
     <body>
-        <div class="login">
+        <div class="container mt-5">
+            <h1 class="mt-2 ms-2">Conectez-vous</h1>
 
-            <h1>Member Login</h1>
+            <form action="/appKlaxon/core/session.php" method="post" class="form-control">
 
-            <form action="/appKlaxon/core/session.php" method="post" class="form login-form">
+            <fieldset>
 
-                <label class="form-label" for="username">Username</label>
+                <label class="form-label" for="username">Votre e-mail</label>
                 <div class="form-group">
-                    <input class="form-input" type="text" name="email" placeholder="Username" id="username" required>
+                    <input class="form-input" type="text" name="email" placeholder="email" id="username" required>
                 </div>
 
-                <label class="form-label" for="password">Password</label>
+                <label class="form-label" for="password">Votre mot de passe</label>
                 <div class="form-group mar-bot-5">
-                    <input class="form-input" type="password" name="keypass" placeholder="Password" id="keypass" required>
-                </div>
+                    <input class="form-input" type="password" name="keypass" placeholder="mot de passe" id="keypass" required>
+                </div><br>
 
-                <button class="btn" type="submit">Login</button>
+                <button class="btn btn-primary" type="submit">Login</button>
+
+            </fieldset>
 
             </form>
 
