@@ -1,0 +1,11 @@
+.navbar {
+    background-color: #00497c;
+}
+.navbar-brand {
+    color: white;
+}
+button.btn-outline-success {
+    background-color: white;
+    color: white;
+    border-color: white;
+}
