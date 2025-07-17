@@ -1,34 +1,63 @@
 <?php
+
+// Clear previous session data
+session_unset();
+// Destroy the session
+session_destroy();
+
+
 // Start the session
 session_start();
 
+
 require_once 'db.php';
-// Check if the form is submitted
+
+// Set the login variables
+
 $email = $_POST['email'];
 $password = $_POST['keypass'];
+
+// Login logic
+
 $sql = "SELECT * FROM users WHERE email = '$email'";
 $result = $conn->query($sql);
 $data = $result->fetch_assoc();
 if ($data ['email'] == $email && $data ['password'] == $password && $data ['role'] === "user") {
-    $name = htmlspecialchars ($_POST["email"]);
+    
+    // Store user data in session
+$_SESSION['user_data'] = true;
+$_SESSION['email'] = $data['email'];
+$_SESSION['nom'] = $data['nom'];
+$_SESSION['prenom'] = $data['prenom'];
+$_SESSION['telephone'] = $data['telephone'];
+
+    
+    // Redirect to the user page
     header('Location: '.$uri.'/appKlaxon/templates/usersPage.php');
+    
     exit();
-    /*
-    $_SESSION['account_loggedin'] = true;
-    $_SESSION['account_email'] = $email;*/
+   
 } 
 
+
 if ($data ['email'] == $email && $data ['password'] == $password && $data ['role'] === "admin") {
-    $name = htmlspecialchars ($_POST["email"]);
+
+    // Store user data in session
+$_SESSION['user_data'] = true;
+$_SESSION['email'] = $data['email'];
+$_SESSION['nom'] = $data['nom'];
+$_SESSION['prenom'] = $data['prenom'];
+$_SESSION['telephone'] = $data['telephone'];
+
+    // Redirect to the admin page
     header('Location: '.$uri.'/appKlaxon/templates/adminPage.php');
-    /*
-    $_SESSION['account_loggedin'] = true;
-    $_SESSION['account_email'] = $email;*/
+    
 }
 else {
 
 header('Location: '.$uri.'/appKlaxon/templates/loginError.php');
 
 }
+
 
 ?>

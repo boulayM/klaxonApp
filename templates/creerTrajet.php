@@ -13,7 +13,8 @@
         <form action="/appKlaxon/controller/trajetController.php" method="post" class="form-control">
 
             <fieldset>
-
+                <legend>Informations du trajet</legend>
+                <?php include '../controller/userTrajetController.php'; ?>
 
                 <label class="form-label" for="depart">Ville de départ</label>
                 <div class="form-group">
@@ -24,7 +25,7 @@
 
                 <label class="form-label" for="dateDepart">Date du départ</label>
                 <div class="form-group mar-bot-5">
-                    <input class="form-input" type="date" name="date_depart" id="dateDepart" required>
+                    <input class="form-input" type="datetime-local" name="date_depart" id="dateDepart" required>
                 </div>
 
                 <label class="form-label" for="arrivee">Ville d'arrivée</label>
@@ -36,7 +37,7 @@
 
                 <label class="form-label" for="dateArrivee">Date d'arrivée</label>
                 <div class="form-group mar-bot-5">
-                    <input class="form-input" type="date" name="date_arrivee" id="dateArrivee" required>
+                    <input class="form-input" type="datetime-local" name="date_arrivee" id="dateArrivee" required>
                 </div>
 
                 <label class="form-label" for="nbr_places">Nombre de places</label>

@@ -16,12 +16,13 @@
                     <a href="/appKlaxon/templates/creerTrajet.php">Créer un trajet</a>
                 </button>
                 <button class="btn btn-outline-success btn-lg">
-                    <a href="/appKlaxon/templates/loginPage.php">Déconnexion</a>
+                    <a href="../core/logout.php">Déconnexion</a>
                 </button>
             </div>
         </div>
     </nav>
+</header>
 <body>    
-    <!-- Additional content can be added here -->
+    <?php include '../controller/homeController.php'; ?>
 </body>
 </html>
