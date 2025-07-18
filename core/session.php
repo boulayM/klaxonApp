@@ -1,10 +1,5 @@
 <?php
 
-// Clear previous session data
-session_unset();
-// Destroy the session
-session_destroy();
-
 
 // Start the session
 session_start();
@@ -30,6 +25,7 @@ $_SESSION['email'] = $data['email'];
 $_SESSION['nom'] = $data['nom'];
 $_SESSION['prenom'] = $data['prenom'];
 $_SESSION['telephone'] = $data['telephone'];
+$_SESSION['id'] = $data['id'];
 
     
     // Redirect to the user page
