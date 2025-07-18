@@ -1,4 +1,6 @@
 <?php
+
+
 // We need to use sessions, so you should always initialize sessions using the below function
 session_start();
 // If the user is logged in, redirect to the home page

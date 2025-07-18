@@ -1,3 +1,12 @@
+<?php
+// Récupérer l'ID envoyé via POST
+if (isset($_POST['id'])) {
+    $id = intval($_POST['id']); // Sécuriser l'entrée
+} else {
+    echo "ID non spécifié.";
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,13 +17,13 @@
 </head>
 <body>
     <div class="container mt-5">
-        <h1 class="mt-2 ms-2">Créer un trajet</h1>
+        <h1 class="mt-2 ms-2">Modifier le trajet</h1>
 
-        <form action="/appKlaxon/controller/trajetController.php" method="post" class="form-control">
+        <form action="/appKlaxon/controller/updateTrajetController.php" method="post" class="form-control">
 
             <fieldset>
                 <legend>Informations du trajet</legend>
-                <?php include '../controller/userTrajetController.php'; ?>
+                <input type="hidden" name="id" value="<?php echo $id; ?>">
 
                 <label class="form-label" for="depart">Ville de départ</label>
                 <div class="form-group">
@@ -52,7 +61,7 @@
 
 
 
-                <button class="btn btn-primary" type="submit">Créer</button>
+                <button class="btn btn-primary" type="submit" name="modifier">Modifier</button>
 
             </fieldset>
 
