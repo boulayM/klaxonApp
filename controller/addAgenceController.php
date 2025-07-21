@@ -1,6 +1,10 @@
 <?php
 
+session_start();
+
 require_once '../core/db.php';
+require 'flashMessageController.php';
+
 
 // Requête pour créer les données
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ajouter'])) {
@@ -12,10 +16,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ajouter'])) {
 
     // Exécuter la requête
     if ($stmt->execute()) {
+        setFlashMessage("Agence créee avec succés!");
         header('Location: '.$uri.'/appKlaxon/templates/agencesList.php');
         exit;
     } else {
-        echo "Erreur lors de l'ajout de l'agence : " . $conn->error;
+        setFlashMessage("Erreur lors de l'ajout de l'agence : "). $conn->error;
+        header('Location: '.$uri.'/appKlaxon/templates/agencesList.php');
+
     }
 
     $stmt->close();

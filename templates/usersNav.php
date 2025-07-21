@@ -6,7 +6,7 @@
                     Créer un trajet
                 </button>
                 <?php include './modals/addTrajet.php' ?>
-                <div>                   
+                <div class="align-content-center">                   
                     <?php if (isset($_SESSION['user_data']) && $_SESSION['user_data']): ?>
                         <span class="text-white me-3">Bienvenue, <?php echo htmlspecialchars($_SESSION['prenom'] ." ". $_SESSION['nom']); ?>!</span>
                     <?php endif; ?>

@@ -1,11 +1,10 @@
 <?php
 require_once '../core/db.php';
-session_start();
 // Requête pour récupérer les données
 $sql = "SELECT 
 trajets.id,
-DATE_FORMAT(date_depart, '%d/%m/%Y-%H:%i') AS date_depart, 
-DATE_FORMAT(date_arrivee, '%d/%m/%Y-%H:%i') AS date_arrivee, 
+DATE_FORMAT(date_depart, '%d/%m/%Y') AS date_depart, 
+DATE_FORMAT(date_arrivee, '%d/%m/%Y') AS date_arrivee, 
 places_dispo, 
 users.nom AS nom,
 users.prenom AS prenom,

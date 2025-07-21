@@ -1,6 +1,8 @@
 <?php
+session_start();
 
 require_once '../core/db.php';
+require 'flashMessageController.php';
 
 // Requête pour modifier les données
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['modifier'])) {
@@ -13,9 +15,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['modifier'])) {
     // Exécuter la requête
 
     if ($stmt->execute()) {
+        setFlashMessage("Agence modifiée avec succés!");
         header('Location: '.$uri.'/appKlaxon/templates/agencesList.php');
         exit;
     } else {
+        setFlashMessage("Erreur lors de la modification!");
         echo "Erreur lors de la mise à jour de l'agence : " . $conn->error;
     }
 

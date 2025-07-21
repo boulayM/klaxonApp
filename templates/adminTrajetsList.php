@@ -17,6 +17,7 @@ require '../controller/trajetListController.php';
 </header>
 <body>
     <div class="container mt-5">
+        <h5 class="ms-3 mt-3"><?php displayFlashMessage();?></h5>
         <h1 class="mb-4">Liste des trajets</h1>
         <table class="table table-striped">
             <thead>
@@ -39,7 +40,11 @@ require '../controller/trajetListController.php';
                             <td><?php echo htmlspecialchars($ligne['arrivee']); ?></td>
                             <td><?php echo htmlspecialchars($ligne['date_arrivee']); ?></td>
                             <td><?php echo htmlspecialchars($ligne['nom']) . htmlspecialchars($ligne['prenom']); ?></td>
+                            <td data-bs-toggle="modal" data-bs-target="#<?php echo htmlspecialchars($ligne['id']); ?>supprimer"><i class="bi bi-trash3"></i></td>
                         </tr>
+
+                    <?php include './modals/adminDeleteTrajet.php'?>
+
                     <?php endwhile; ?>
                 <?php else: ?>
                     <tr><td colspan="5">Aucun trajet trouvé.</td></tr>

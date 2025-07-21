@@ -1,6 +1,9 @@
 <?php
 
+session_start();
+
 require_once '../core/db.php';
+require 'flashMessageController.php';
 
 if (isset($_POST['supprimer'])) {
     $id = intval($_POST['id']); // Sécuriser l'entrée
@@ -10,10 +13,13 @@ if (isset($_POST['supprimer'])) {
     $stmt->bind_param("i", $id);
 
     if ($stmt->execute()) {
+        setFlashMessage("Agence supprimée avec succés!");
         header('Location: '.$uri.'/appKlaxon/templates/agencesList.php');
         exit;
     } else {
-        echo "Erreur lors de la suppression.";
+        setFlashMessage("Erreur lors de la suppression!");
+        header('Location: '.$uri.'/appKlaxon/templates/agencesList.php');
+
     }
 }
 ?>
