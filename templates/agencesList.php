@@ -1,8 +1,5 @@
-<?php
+<?php require_once '../controller/agencesListController.php';?>
 
-require_once '../controller/agencesListController.php';
-
-?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -18,6 +15,7 @@ require_once '../controller/agencesListController.php';
 </header>
 <body>
     <div class="container mt-5">
+        <h5 class="ms-3 mt-3"><?php displayFlashMessage();?></h5>
         <h1 class="mb-4">Liste des agences</h1>
         <p>Pour ajouter une nouvelle agence rendez-vous à la fin de cette page</p>
         <table class="table table-striped">
@@ -34,52 +32,14 @@ require_once '../controller/agencesListController.php';
                             <td><?php echo htmlspecialchars($ligne['id']); ?></td>
                             <td><?php echo htmlspecialchars($ligne['ville']); ?></td>
                             <td>
-                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#<?php echo htmlspecialchars($ligne['id']); ?>mod">Modifier</button>
+                                <td data-bs-toggle="modal" data-bs-target="#<?php echo htmlspecialchars($ligne['id']); ?>mod"><i class="bi bi-pencil-square"></i></td>
                             </td>
                             <td>
-                                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#<?php echo htmlspecialchars($ligne['id']); ?>sup">Supprimer</button>
+                                <td data-bs-toggle="modal" data-bs-target="#<?php echo htmlspecialchars($ligne['id']); ?>sup"><i class="bi bi-trash3"></i></td>
                             </td>
                         </tr>
-                        <div class="modal fade" id="<?php echo htmlspecialchars($ligne['id']); ?>mod" tabindex="-1" aria-labelledby="modifierLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="modifierLabel">Modifier l'agence</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form method="POST" action="../controller/updateAgenceController.php">
-                                            <div class="mb-3">
-                                                <label for="ville" class="form-label">Nom de l'agence</label>
-                                                <input type="text" class="form-control" id="ville" name="ville" required>
-                                            </div>
-                                            <input type="hidden" name="id" value="<?php echo htmlspecialchars($ligne['id']); ?>">
-                                            <button type="submit" class="btn btn-primary" name="modifier">Enregistrer les modifications</button>
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal fade" id="<?php echo htmlspecialchars($ligne['id']); ?>sup" tabindex="-1" aria-labelledby="supprimerLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="supprimerLabel">Supprimer l'agence</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>Êtes-vous sûr de vouloir supprimer cette agence ?</p>
-                                        <form method="POST" action="../controller/deleteAgenceController.php">
-                                            <input type="hidden" name="id" value="<?php echo htmlspecialchars($ligne['id']); ?>">
-                                            <button type="submit" class="btn btn-danger" name="supprimer">Supprimer</button>
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                        <?php include './modals/adminUpdateAgence.php'?>
+                        <?php include './modals/deleteAgence.php'?>
     </div>
 
                     <?php endwhile; ?>

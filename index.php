@@ -16,6 +16,6 @@ if (!empty($_SERVER['HTTPS']) && ('on' == $_SERVER ['HTTPS'])){
 // Append the host to the URI
 // This will ensure that the redirect works regardless of the server's domain
 $uri .= $_SERVER['HTTP_HOST'];
-header('Location: '.$uri.'/appKlaxon/templates/dashboard.php');
+header('Location: '.$uri.'/appKlaxon/templates/accueil.php');
 exit;
 ?>

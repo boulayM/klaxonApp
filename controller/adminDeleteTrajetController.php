@@ -14,7 +14,7 @@ if (isset($_POST['supprimer'])) {
 
     if ($stmt->execute()) {
         setFlashMessage("Trajet supprimé avec succés!");
-        header('Location: '.$uri.'/appKlaxon/templates/usersPage.php');
+        header('Location: '.$uri.'/appKlaxon/templates/adminTrajetsList.php');
         exit;
     } else {
         echo "Erreur lors de la suppression.";

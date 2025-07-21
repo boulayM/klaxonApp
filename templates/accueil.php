@@ -11,18 +11,20 @@
     <nav class="navbar">
   <div class="container-fluid">
     <div>
-    <a class="navbar-brand" href="#">TOUCHE PAS AU KLAXON</a>
+    <a class="navbar-brand">TOUCHE PAS AU KLAXON</a>
   </div>
   <div class="nav justify-content-end me-4">
-    <button class="btn btn-light btn-lg">
-        <a href="/appKlaxon/templates/loginPage.php">Login</a>
+    <button class="btn btn-light btn-lg" data-bs-toggle="modal" data-bs-target="#loggin">
+      Loggin
     </button>
   </div>
   </div>
 </nav>
 </header>
 <body>
+  <h3 class="ms-3 mt-3">POUR OBTENIR PLUS D'INFORMATIONS SUR UN TRAJET, VEUILLEZ VOUS CONNECTER.</h3>
   <?php include 'trajetsList.php'; ?>
+  <?php include './modals/loggin.php';?>
 </body>
 <footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>

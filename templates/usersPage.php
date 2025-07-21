@@ -1,3 +1,4 @@
+<?php require '../controller/flashMessageController.php' ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -12,6 +13,7 @@
     <?php include 'usersNav.php'; ?>
 </header>
 <body>    
+    <h5 class="ms-3 mt-3"><?php displayFlashMessage();?></h5>
     <?php include 'trajetsListLoged.php'; ?>
 </body>
 </html>

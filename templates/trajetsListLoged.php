@@ -1,8 +1,8 @@
-<?php require '../controller/homeController.php';?>
+<?php require '../controller/trajetListController.php';?>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 <link rel="stylesheet" href="../assets/style.css">
 <div class="container mt-5">
-        <h1 class="mb-4">Liste des trajets</h1>
+        <h3 class="mb-4">Trajets proposés</h3>
         <table class="table table-striped">
             <thead>
                 <tr>
