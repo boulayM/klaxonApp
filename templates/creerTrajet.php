@@ -10,7 +10,7 @@
     <div class="container mt-5">
         <h1 class="mt-2 ms-2">Créer un trajet</h1>
 
-        <form action="/appKlaxon/controller/trajetController.php" method="post" class="form-control">
+        <form action="/appKlaxon/controller/addTrajetController.php" method="post" class="form-control">
 
             <fieldset>
                 <legend>Informations du trajet</legend>

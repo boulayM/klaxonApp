@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,21 +9,9 @@
     <title>Klaxon Users</title>
 </head>
 <header>
-    <nav class="navbar">
-        <div class="container-fluid">
-            <div class="navbar-brand">TOUCHE PAS AU KLAXON</div>
-            <div class="nav justify-content-end me-4">
-                <button class="btn btn-outline-success btn-lg me-3">
-                    <a href="/appKlaxon/templates/creerTrajet.php">Créer un trajet</a>
-                </button>
-                <button class="btn btn-outline-success btn-lg">
-                    <a href="../core/logout.php">Déconnexion</a>
-                </button>
-            </div>
-        </div>
-    </nav>
+    <?php include 'usersNav.php'; ?>
 </header>
 <body>    
-    <?php include '../controller/homeController.php'; ?>
+    <?php include 'trajetsListLoged.php'; ?>
 </body>
 </html>
