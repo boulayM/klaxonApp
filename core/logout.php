@@ -1,9 +1,6 @@
 <?php
-// Start the session
-session_start();
-
 // Unset all session variables
-$_SESSION = array();
+$_SESSION = [];
 
 // Destroy the session cookie (if it exists)
 if (ini_get("session.use_cookies")) {
