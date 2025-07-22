@@ -1,3 +1,11 @@
+<?php
+/**
+ * 
+ * Modale contenant le formulaire pour que l'administrateur exclue un trajet de la base de données
+ * 
+ */
+?>
+
 <div class="modal fade" id="<?php echo htmlspecialchars($ligne['id']); ?>supprimer" tabindex="-1" aria-labelledby="infosLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">

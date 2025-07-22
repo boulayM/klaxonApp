@@ -1,4 +1,13 @@
 <?php
+
+/**
+ * 
+ * CONTROLEUR POUR AFFICHER LA LISTE DÉROULANTE CONTENANT LES VILLES POUR LES FORMULAIRES D'INSERTION ET MODIFICATION DES TRAJETS
+ * 
+ * Requête pour réccupérer les données
+ * Boucle pour afficher le nom des villes dnas une liste dérooulante
+ * 
+ */
 require_once '../core/db.php';
 
 // Requête pour récupérer les données

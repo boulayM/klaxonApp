@@ -1,4 +1,16 @@
-<?php require_once '../controller/agencesListController.php';?>
+<?php 
+/**
+ * 
+ * HTML contenant la liste des agences
+ * Requiert la liste des trajets depuis le controleur
+ * Inclue la barre de navigation des administrateurs
+ * Parcourre la liste des agences dans la base de données et les affiche dans un tableau
+ * Inclue la modale permettant de modifier une agence
+ * Inclue la modale permettant d'exclure une agence
+ * Inclue le footer commun à toutes les pages
+ */
+require '../controller/agencesListController.php';
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -48,6 +60,7 @@
                 <?php endif; ?>
             </tbody>
         </table><br>
+        
         <h4>Ajouter une nouvelle agence</h4><br>
         <button class="btn btn-success mb-4" data-bs-toggle="modal" data-bs-target="#ajouter">Ajouter une agence</button>
         <div class="modal fade" id="ajouter" tabindex="-1" aria-labelledby="ajouterLabel" aria-hidden="true">
@@ -70,6 +83,10 @@
                 </div>
             </div>
         </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
+
+    <?php include 'footer.php'?>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+
 </html>

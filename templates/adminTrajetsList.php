@@ -1,6 +1,16 @@
 <?php
+/**
+ * 
+ * HTML contenant la liste des trajets de la page des administrateurs
+ * Requiert la liste des trajets depuis le controleur
+ * Inclue la barre de navigation des administrateurs
+ * Parcourre la liste des trajets dans la base de données et les affiche dans un tableau
+ * Inclue la modale permettant d'exclure un trajet
+ * Inclue le footer commun à toutes les pages
+ */
 
 require '../controller/trajetListController.php';
+
 
 ?>
 <!DOCTYPE html>
@@ -39,7 +49,7 @@ require '../controller/trajetListController.php';
                             <td><?php echo htmlspecialchars($ligne['date_depart']); ?></td>
                             <td><?php echo htmlspecialchars($ligne['arrivee']); ?></td>
                             <td><?php echo htmlspecialchars($ligne['date_arrivee']); ?></td>
-                            <td><?php echo htmlspecialchars($ligne['nom']) . htmlspecialchars($ligne['prenom']); ?></td>
+                            <td><?php echo htmlspecialchars($ligne['nom']) ." ". htmlspecialchars($ligne['prenom']); ?></td>
                             <td data-bs-toggle="modal" data-bs-target="#<?php echo htmlspecialchars($ligne['id']); ?>supprimer"><i class="bi bi-trash3"></i></td>
                         </tr>
 
@@ -54,4 +64,5 @@ require '../controller/trajetListController.php';
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
+    <?php include 'footer.php'?>
 </html>

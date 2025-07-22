@@ -1,6 +1,14 @@
 <?php
 
-// Function to set Flash Messages
+/**
+ * 
+ * CONTROLEUR DE GENERATION DE MESSAGES FLASH
+ * 
+ * Fonction pour définir des messages Flash
+ * Fonction pour afficher les messages Flash
+ * 
+ */
+
 function setFlashMessage($message, $type = 'info') {
     $_SESSION['flash_message'] = [
         'message' => $message,
@@ -8,7 +16,6 @@ function setFlashMessage($message, $type = 'info') {
     ];
 }
 
-// Function to display flash messages
 
 function displayFlashMessage() {
     if (isset($_SESSION['flash_message'])) {

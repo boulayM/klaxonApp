@@ -1,6 +1,13 @@
 .navbar {
     background-color: #00497c;
 }
+footer {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 40px;
+    background-color: #00497c;
+}
 .navbar-brand {
     color: white;
 }

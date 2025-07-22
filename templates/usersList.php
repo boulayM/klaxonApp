@@ -1,5 +1,12 @@
 <?php
-
+/**
+ * 
+ * HTML contenant la liste des utilisateurs (page admin)
+ * Requiert le controlleur avec la requête permettant d'obtenir la liste des utilisateurs depuis la base de données
+ * Parcourt la liste des utilisateurs en les incluant un par un dans un tableau
+ * Inclue le footer commun à toutes les pages
+ * 
+ */
 require '../controller/usersListController.php';
 
 ?>
@@ -49,4 +56,7 @@ require '../controller/usersListController.php';
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
+
+    <?php include 'footer.php'?>
+    
 </html>

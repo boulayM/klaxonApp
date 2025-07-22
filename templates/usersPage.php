@@ -1,4 +1,13 @@
-<?php require '../controller/flashMessageController.php' ?>
+<?php 
+/**
+ * 
+ * HTML contenant la page d'accueil des utilisateurs connectés
+ * Requiert le controlleur permettant d'afficher des messages Flash
+ * Inclue la fonction permettant d'afficher les messages Flash
+ * 
+ */
+require '../controller/flashMessageController.php'
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -16,4 +25,5 @@
     <h5 class="ms-3 mt-3"><?php displayFlashMessage();?></h5>
     <?php include 'trajetsListLoged.php'; ?>
 </body>
+    <?php include 'footer.php'?>
 </html>

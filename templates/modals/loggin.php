@@ -1,3 +1,11 @@
+<?php
+/**
+ * 
+ * Modale contenant le formulaire pour procéder au login d'un utilisateur
+ * 
+ */
+?>
+
 <div class="modal fade" id="loggin" tabindex="-1" aria-labelledby="infosLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">

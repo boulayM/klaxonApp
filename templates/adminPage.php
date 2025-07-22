@@ -1,4 +1,12 @@
-<?php session_start();?>
+<?php
+/**
+ * 
+ * HTML contenant la page d'accueil de l'administrateur
+ * Inclue la barre de navigation des administrateurs
+ * Inclue le footer commun à toutes les pages
+ * 
+ */
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -13,6 +21,10 @@
 <header>
     <?php include 'adminNav.php'; ?>
 </header>
-<body>    
+<body> 
+    <br>
+    <br>
+    <br>   
 </body>
+    <?php include 'footer.php'?>
 </html>
