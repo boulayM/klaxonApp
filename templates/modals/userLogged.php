@@ -12,7 +12,7 @@
                         <div class="mb-3">
                             <label for="depart" class="form-label">Départ</label><br>
                                 <select name = "depart" required>
-                                    <?php include '../controller/formTrajetController.php'; ?>
+                                    <?php include '../../controller/formTrajetController.php'; ?>
                                 </select>
                         </div>
                         <div class="mb-3">
@@ -22,7 +22,7 @@
                         <div class="mb-3">
                             <label for="arrivee" class="form-label">Arrivée</label><br>
                             <select name = "arrivee" required>
-                                <?php include '../controller/formTrajetController.php'; ?>
+                                <?php include '../../controller/formTrajetController.php'; ?>
                             </select>
                         </div>
                         <div class="mb-3">

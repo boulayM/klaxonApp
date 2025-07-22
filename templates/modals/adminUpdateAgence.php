@@ -1,3 +1,11 @@
+<?php
+/**
+ * 
+ * Modale contenant le formulaire pour la modification des données d'une agence
+ * 
+ */
+?>
+
 <div class="modal fade" id="<?php echo htmlspecialchars($ligne['id']); ?>mod" tabindex="-1" aria-labelledby="modifierLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">

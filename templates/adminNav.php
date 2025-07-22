@@ -1,4 +1,14 @@
 <?php
+/**
+ * 
+ * HTML contenant la barre de navigation des administrateurs
+ * Démarre la session pour avoir accés aux données des utilisateurs
+ * Requiert le copntrolleur permettant d'afficher les messages Flash et qui sera 
+ * disponible sur toutes les pages contenant cette barre de navigation
+ * Vérifie si l'utilisateur est connecté et affiche un message de bienvennue avec son prénom et son nom
+ * 
+ */
+session_start();
 require '../controller/flashMessageController.php';
 ?>
 <nav class="navbar">

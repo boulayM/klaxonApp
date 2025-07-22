@@ -1,3 +1,11 @@
+<?php
+/**
+ * 
+ * Modale contenant le formulaire pour supprimer un trajet
+ * 
+ */
+?>
+
 <div class="modal fade" id="<?php echo htmlspecialchars($ligne['id']); ?>supprimer" tabindex="-1" aria-labelledby="infosLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">

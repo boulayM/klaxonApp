@@ -1,3 +1,11 @@
+<?php
+/**
+ * 
+ * Modale contenant le formulaire pour supprimer une agence
+ * 
+ */
+?>
+
 <div class="modal fade" id="<?php echo htmlspecialchars($ligne['id']); ?>sup" tabindex="-1" aria-labelledby="supprimerLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">

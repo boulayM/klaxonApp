@@ -1,8 +1,21 @@
 <?php
-// Unset all session variables
+
+/**
+ * 
+ * SCRIPT DE DÉCONNEXION DE LA SESSION
+ * 
+ */
+
+/**
+ * 
+ * Réinitialiser toutes les variables de session
+ */
 $_SESSION = [];
 
-// Destroy the session cookie (if it exists)
+/**
+ * 
+ * Détruit tous les cookies de session
+ */
 if (ini_get("session.use_cookies")) {
     $params = session_get_cookie_params();
     setcookie(session_name(), '', time() - 42000,
@@ -10,11 +23,16 @@ if (ini_get("session.use_cookies")) {
         $params["secure"], $params["httponly"]
     );
 }
-
-// Destroy the session
+/**
+ * 
+ * Détruit la session
+ */
 session_destroy();
 
-// Redirect to the login page or another page
+/**
+ * 
+ * Redirectionne vers la page de login
+ */
 header('Location: '.$uri.'/appKlaxon/templates/accueil.php');
 exit;
 ?>

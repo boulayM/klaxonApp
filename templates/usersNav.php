@@ -1,3 +1,14 @@
+    <?php
+    /**
+     * 
+     * HTML contanat la barre de navigation des utilisateurs connectés
+     * Démarre la session pour avoir accés aux données des utilisateurs
+     * Inclue la modale contenat le formulaire pour l'ajout d'un nouveau trajet
+     * Vérifie si l'utilisateur est connecté et affiche un message de bienvennue avec son prénom et son nom
+     * 
+     */ 
+    session_start();
+    ?>
     <nav class="navbar">
         <div class="container-fluid">
             <div class="navbar-brand">TOUCHE PAS AU KLAXON</div>
@@ -11,8 +22,8 @@
                         <span class="text-white me-3">Bienvenue, <?php echo htmlspecialchars($_SESSION['prenom'] ." ". $_SESSION['nom']); ?>!</span>
                     <?php endif; ?>
                 </div>
-                <button class="btn btn-outline-success btn-lg">
-                    <a href="../core/logout.php">Déconnexion</a>
+                <button class="btn btn-danger btn-lg">
+                    <a href="../core/logout.php" class="text-white" style="text-decoration: none">Déconnexion</a>
                 </button>
             </div>
         </div>

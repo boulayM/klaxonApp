@@ -1,7 +1,14 @@
 <?php
-// Récupérer l'ID envoyé via POST
+/**
+ * 
+ * HTML contenat le formulaire pour modifier un trajet
+ * Récupérer l'ID envoyé via POST depuis l'icône dans la page des utilisateurs connectés
+ * Contient un champ input avec l'ID réccuppérée
+ * Inclue le controleur conotenant la liste déroulante des villes
+ *  
+ */
 if (isset($_POST['id'])) {
-    $id = intval($_POST['id']); // Sécuriser l'entrée
+    $id = intval($_POST['id']);
 } else {
     echo "ID non spécifié.";
     exit;
@@ -37,6 +44,11 @@ if (isset($_POST['id'])) {
                     <input class="form-input" type="date" name="date_depart" id="dateDepart" required>
                 </div>
 
+                <label class="form-label" for="dateDepart">Heure du départ</label>
+                <div class="form-group mar-bot-5">
+                    <input class="form-input" type="time" name="heure_depart" id="dateDepart" required>
+                </div>
+
                 <label class="form-label" for="arrivee">Ville d'arrivée</label>
                 <div class="form-group">
                     <select name = "arrivee" required>
@@ -49,6 +61,11 @@ if (isset($_POST['id'])) {
                     <input class="form-input" type="date" name="date_arrivee" id="dateArrivee" required>
                 </div>
 
+                <label class="form-label" for="dateDepart">Heure d'arrivée</label>
+                <div class="form-group mar-bot-5">
+                    <input class="form-input" type="time" name="heure_arrivee" id="dateDepart" required>
+                </div>
+
                 <label class="form-label" for="nbr_places">Nombre de places</label>
                 <div class="form-group">
                     <input class="form-input" type="number" name="nbr_places" id="nbr_places" required>
@@ -59,15 +76,15 @@ if (isset($_POST['id'])) {
                     <input class="form-input" type="number" name="places_dispo" id="places_dispo" required>
                 </div><br>
 
-
-
                 <button class="btn btn-primary" type="submit" name="modifier">Modifier</button>
-
+                <button class="btn btn-danger" type="reset" name="modifier">
+                   <a href="/appKlaxon/templates/usersPage.php" class="text-white" style="text-decoration: none">Anuler</a>
+                </button>
             </fieldset>
 
-            </form>
+        </form>
 
-        </div>
+    </div>
 
 </body>
 </html>

@@ -1,21 +1,26 @@
 <?php
-/*
----------------------------
-REDIRECT TO HOME PAGE
+
+/** 
+ * 
+ * POINT D'ENTREE DE L'APPLICATION
+ *  
+ * Vérifie si le script est accessible via HTTPS
+ * Si HTTPS est activé, configure l'URI pour utiliser https
+ * Si HTTPS  est désactivé, configure l'URI pour utiliser http
+ * Ajoute le HOST à l'URI
+ * Ceci garantira que la redirection fonctionne quelle que soit le domaine du serveur
+ * 
+ * Redirection vers la page d'accueil
+
 */
 
-// Check if the script is accessed via HTTPS
 if (!empty($_SERVER['HTTPS']) && ('on' == $_SERVER ['HTTPS'])){
-    // If HTTPS is on, set the URI to use https
     $uri = 'https://';
 } else {
-    // If HTTPS is off, set the URI to use http
-    // This is useful for local development or when the server does not support HTTPS
     $uri = 'http://';
 }
-// Append the host to the URI
-// This will ensure that the redirect works regardless of the server's domain
 $uri .= $_SERVER['HTTP_HOST'];
 header('Location: '.$uri.'/appKlaxon/templates/accueil.php');
 exit;
+
 ?>

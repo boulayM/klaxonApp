@@ -1,11 +1,22 @@
 <?php
+
+/**
+ * 
+ * CONTROLEUR DE REQUÊTE POUR AFFICHER LES INFORMATIONS DES TRAJETS
+ * 
+ * Requière la connexion à la base de données
+ * Requête de réccupération des données
+ * 
+ */
 require_once '../core/db.php';
-// Requête pour récupérer les données
 $sql = "SELECT 
 trajets.id,
 DATE_FORMAT(date_depart, '%d/%m/%Y') AS date_depart, 
+heure_depart,
 DATE_FORMAT(date_arrivee, '%d/%m/%Y') AS date_arrivee, 
-places_dispo, 
+heure_arrivee,
+places_dispo,
+nbr_places,
 users.nom AS nom,
 users.prenom AS prenom,
 users.email AS email,
