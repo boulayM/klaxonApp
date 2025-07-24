@@ -13,8 +13,15 @@
  * Redirection vers la page d'accueil
 
 */
+/*
+$prefixURL = '/appKlaxon';
+$url = $_SERVER['REQUEST_URI'];
 
+if ($url == $prefixURL.''){
+    require ('./templates/accueil.php');
+}
 
+*/
 
 if (!empty($_SERVER['HTTPS']) && ('on' == $_SERVER ['HTTPS'])){
     $uri = 'https://';
