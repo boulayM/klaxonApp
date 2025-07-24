@@ -16,11 +16,11 @@
                 <form action="/appKlaxon/controller/addTrajetController.php" method="post" class="form-control">
                     <fieldset>
                         <legend>Informations du trajet</legend>
-                        <?php include '../../controller/userTrajetController.php'; ?>
+                        <?php include '../controller/userTrajetController.php'; ?>
                         <label class="form-label" for="depart">Ville de départ</label>
                         <div class="form-group">
                             <select name = "depart" required>
-                                <?php include '../../controller/formTrajetController.php'; ?>
+                                <?php include '../controller/formTrajetController.php'; ?>
                             </select>
                         </div>
                         <label class="form-label" for="dateDepart">Date du départ</label>
@@ -34,7 +34,7 @@
                         <label class="form-label" for="arrivee">Ville d'arrivée</label>
                         <div class="form-group">
                             <select name = "arrivee" required>
-                                <?php include '../../controller/formTrajetController.php'; ?>
+                                <?php include '../controller/formTrajetController.php'; ?>
                             </select>
                         </div>
                         <label class="form-label" for="dateArrivee">Date d'arrivée</label>

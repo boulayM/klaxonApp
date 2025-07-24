@@ -10,7 +10,6 @@
  * dans les champs de lecture seule du formulaire qui le requère
  * 
  */
-session_start(); 
 require_once '../core/db.php';
 
 ?>
