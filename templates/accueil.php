@@ -32,7 +32,7 @@
 <body>
   <h3 class="ms-3 mt-3">POUR OBTENIR PLUS D'INFORMATIONS SUR UN TRAJET, VEUILLEZ VOUS CONNECTER.</h3>
   <?php include 'trajetsList.php'; ?>
-  <?php include './modals/loggin.php';?>
+  <?php include 'modals/loggin.php';?>
 </body>
   <?php include 'footer.php'?>
 </html>

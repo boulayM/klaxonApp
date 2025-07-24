@@ -8,7 +8,7 @@
  * Requête de réccupération des données
  * 
  */
-require_once '../core/db.php';
+require '../core/db.php';
 $sql = "SELECT 
 trajets.id,
 DATE_FORMAT(date_depart, '%d/%m/%Y') AS date_depart, 
